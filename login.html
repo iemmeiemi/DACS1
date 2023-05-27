@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  </head>
+  <body onload="createCaptcha()">
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="index.html" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="./img/soul-logo.png" alt="easyclass" />
+              </div>
+
+              <div class="heading">
+                <h2>Đăng nhập</h2>
+                <h6>Nếu bạn chưa có tài khoản?</h6>
+                <a href="#" class="toggle">Đăng ký</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Tên đăng nhập</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Mật khẩu</label>
+                </div>
+
+                <input type="submit" value="Sign In" class="sign-btn" />
+
+                <p class="text">
+                  Quên mật khẩu?
+                  <a href="#">Nhận trợ giúp</a> đăng nhập
+                </p>
+              </div>
+            </form>
+
+            <form action="index.html" autocomplete="off" class="sign-up-form">
+              <div class="logo">
+                <img src="./img/soul-logo.png" alt="easyclass" />
+    
+              </div>
+
+              <div class="heading">
+                <h2>Đăng ký</h2>
+                <h6>Bạn đã có tài khoản?</h6>
+                <a href="#" class="toggle">Đăng ký</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Tên đăng nhập</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="date"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+              
+                  />
+                  <label></label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Mật khẩu</label>
+                </div>
+
+                <div class="container">
+                  <div class="content">
+                      <div id="captcha"></div>
+                      <button class="regenerateCaptcha";" onclick="createCaptcha()">
+                          <i class="fas fa-redo"></i>
+                      </button>
+                  </div>
+                  <input type="text" placeholder="Enter Captcha" id="captchaText"/>
+                  <button onclick="validateCaptcha()" class="submit">Submit</button>
+              </div>
+
+             
+
+              <div class="signup">
+                <input type="submit" value="Đăng Ký" class="sign-btn" />
+
+              <p class="text">
+                Bằng cách đăng ký, tôi đồng ý với
+                <a href="#">Điều khoản dịch vụ</a> và
+                <a href="#">Chính sách bảo mật</a>
+              </p>
+              </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="./img/image-login1.jpg" class="image img-1 show" alt="" />
+              <img src="./img/image-login2.jpg" class="image img-2" alt="" />
+              <img src="./img/image-login3.jpg" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Tìm lại bình an trong lòng bạn</h2>
+                  <h2>Chữa lành tâm hồn, đổi mới cuộc sống</h2>
+                  <h2>Tìm sự hài hòa, đón nhận niềm vui</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+
+    <script src="script/capcha.js"></script>
+    <script src="script/login.js"></script>
+  </body>
+</html>
